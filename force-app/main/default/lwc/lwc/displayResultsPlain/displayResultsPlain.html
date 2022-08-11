@@ -1,0 +1,14 @@
+<template>
+    <template if:true={contacts}>
+        <div class="slds-m-top_medium">
+            <strong>SEARCH RESULTS: </strong>
+            <template for:each={contacts} for:item="con">
+                <div key={con.Id} class="slds-m-bottom_small" data-id={con.Id} onclick={clickHandler}>
+                    <strong>{con.FirstName} {con.LastName}</strong> <br/>
+                    {con.Title} <br/>
+                    {con.Department} <br/>
+                </div>
+            </template>
+        </div>
+    </template>
+</template>
